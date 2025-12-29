@@ -17,7 +17,7 @@ include $(INCLUDE_DIR)/package.mk
 define KernelPackage/usb-net-rtl8152-vendor
   TITLE:=Kernel module for USB-to-Ethernet Realtek convertors
   SUBMENU:=USB Support
-  DEPENDS:=+kmod-usb-net
+  DEPENDS:=+kmod-usb-net +kmod-lib-phy
   FILES:= $(PKG_BUILD_DIR)/r8152.ko
   AUTOLOAD:=$(call AutoProbe,r8152)
   CONFLICTS:=kmod-usb-net-rtl8152
